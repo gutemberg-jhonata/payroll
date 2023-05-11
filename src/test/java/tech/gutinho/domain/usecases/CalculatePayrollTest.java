@@ -1,4 +1,4 @@
-package tech.gutinho;
+package tech.gutinho.domain.usecases;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import tech.gutinho.domain.entities.Employee;
 import tech.gutinho.domain.entities.EmploymentContract;
 import tech.gutinho.domain.entities.Payslip;
-import tech.gutinho.domain.usecases.CalculatePayrollUseCase;
 
 public class CalculatePayrollTest {
     CalculatePayrollUseCase sut;
