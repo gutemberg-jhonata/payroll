@@ -5,6 +5,8 @@ import tech.gutinho.domain.entities.EmploymentContract;
 import tech.gutinho.domain.entities.Payslip;
 
 public class CalculatePayrollUseCase {
+    public static final double EXTRA_PERCENTUAL_VALUE = 0.1;
+
     public Payslip calculate(double hoursWorked, EmploymentContract employmentContract) {
         return calculate(hoursWorked, 0, employmentContract);
     }
@@ -30,6 +32,6 @@ public class CalculatePayrollUseCase {
     }
 
     private double calculateExtraValue(double totalValue, Employee employee) {
-        return employee.hasChildren() ? totalValue * 0.1 : 0;
+        return employee.hasChildren() ? totalValue * EXTRA_PERCENTUAL_VALUE : 0;
     }
 }

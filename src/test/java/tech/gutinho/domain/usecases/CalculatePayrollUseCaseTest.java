@@ -9,7 +9,7 @@ import tech.gutinho.domain.entities.Employee;
 import tech.gutinho.domain.entities.EmploymentContract;
 import tech.gutinho.domain.entities.Payslip;
 
-public class CalculatePayrollTest {
+public class CalculatePayrollUseCaseTest {
     CalculatePayrollUseCase sut;
 
     @BeforeEach
