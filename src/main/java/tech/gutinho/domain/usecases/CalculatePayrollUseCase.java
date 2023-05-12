@@ -16,7 +16,7 @@ public class CalculatePayrollUseCase {
         final double totalOvertimeValue = calculateTotalOvertimeValue(overtimeWorked, employmentContract);
         final double totalValue = totalHoursValue + totalOvertimeValue;
         final double extraValue = calculateExtraValue(totalValue, employmentContract.getEmployee());
-        Payslip payslip = new Payslip();
+        var payslip = new Payslip();
         payslip.setTotalHoursValue(totalHoursValue);
         payslip.setTotalOvertimeValue(totalOvertimeValue);
         payslip.setExtraValue(extraValue);

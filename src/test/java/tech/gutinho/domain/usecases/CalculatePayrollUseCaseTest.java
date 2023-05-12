@@ -19,9 +19,9 @@ public class CalculatePayrollUseCaseTest {
 
     @Test
     public void given_hours_value_equals_100_and_hours_worked_40_when_calculate_then_return_payslip_with_total_hours_4000() {
-        Employee employee = new Employee();
+        var employee = new Employee();
         employee.setName("Gutinho");
-        EmploymentContract employmentContract = new EmploymentContract(employee);
+        var employmentContract = new EmploymentContract(employee);
         employmentContract.setHoursValue(100);
         double hoursWorked = 40;
 
@@ -35,10 +35,10 @@ public class CalculatePayrollUseCaseTest {
 
     @Test
     public void given_hours_value_equals_100_hours_worked_40_and_has_a_child_when_calculate_then_return_payslip_with_total_hours_4000_and_extra_400() {
-        Employee employee = new Employee();
+        var employee = new Employee();
         employee.setName("Gutinho");
         employee.setNumberOfChildren(1);
-        EmploymentContract employmentContract = new EmploymentContract(employee);
+        var employmentContract = new EmploymentContract(employee);
         employmentContract.setHoursValue(100);
         double hoursWorked = 40;
 
@@ -52,9 +52,9 @@ public class CalculatePayrollUseCaseTest {
 
     @Test
     public void given_hours_value_equals_100_overtime_value_equals_50_hours_worked_40_and_overtime_worked_20_when_calculate_then_return_payslip_with_total_hours_4000_and_total_overtime_1000() {
-        Employee employee = new Employee();
+        var employee = new Employee();
         employee.setName("Gutinho");
-        EmploymentContract employmentContract = new EmploymentContract(employee);
+        var employmentContract = new EmploymentContract(employee);
         employmentContract.setHoursValue(100);
         employmentContract.setOvertimeValue(50);
         double hoursWorked = 40;
@@ -70,10 +70,10 @@ public class CalculatePayrollUseCaseTest {
 
     @Test
     public void given_hours_value_equals_100_overtime_value_equals_50_hours_worked_40_overtime_worked_20_and_have_a_child_when_calculate_then_return_payslip_with_total_hours_4000_total_overtime_1000_and_extra_500() {
-        Employee employee = new Employee();
+        var employee = new Employee();
         employee.setName("Gutinho");
         employee.setNumberOfChildren(1);
-        EmploymentContract employmentContract = new EmploymentContract(employee);
+        var employmentContract = new EmploymentContract(employee);
         employmentContract.setHoursValue(100);
         employmentContract.setOvertimeValue(50);
         double hoursWorked = 40;
